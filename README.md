@@ -39,7 +39,7 @@ screenshots/5.png
 
 🔍 How It Works
 1. Data Generation
-The dataset includes 90 days of sales data for products like Laptops, Mobiles, Tablets, and Headphones.
+The dataset includes 100 days of sales data for products like Laptops, Mobiles, Tablets, and Headphones.
 
 python
 np.random.seed(42)
