@@ -23,25 +23,27 @@ cd Sales-Analysis
 
 Install dependencies:
 
-powershell
+```powershell
 pip install pandas numpy matplotlib seaborn scikit-learn
 
 Run the project:
 
-powershell
+```powershell
 python sales_analysis.py
 
-📷 Screenshots
-Sales Trend Visualization
-screenshots/2.png
-Sales Prediction Chart
-screenshots/5.png
+## 📷 Screenshots
+
+### Sales Trend Visualization  
+![Sales Trend](screenshots/2.png)
+
+### Sales Prediction Chart  
+![Sales Prediction](screenshots/5.png)
 
 🔍 How It Works
 1. Data Generation
 The dataset includes 100 days of sales data for products like Laptops, Mobiles, Tablets, and Headphones.
 
-python
+```python
 np.random.seed(42)
 data = {
     'Date': pd.date_range(start='2025-01-01', periods=100, freq='D'),
@@ -57,18 +59,18 @@ df.describe() to see summary stats
 
 Group sales per product:
 
-python
+```python
 sales_per_product = df.groupby("Product")["Total_Sales"].sum()
 
 3. Visualization
 📊 Total Sales Per Product
-python
+```python
 sns.barplot(x=sales_per_product.index, y=sales_per_product.values)
 plt.title("Total Sales per Product")
 plt.show()
 
 📈 Sales Trends Over Time
-python
+```python
 sns.lineplot(x=df["Date"], y=df["Total_Sales"])
 plt.title("Sales Trend Over 90 Days")
 plt.show()
